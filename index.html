@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+    <div class="pages">
+        音频+可以关闭
+    </div>
+    <div class="musicPlay music-play rotate" play="closed">122121</div>
+    <div class="invMusic"><audio id="playMusic" preload="load" autoplay=""  src="https://www.runoob.com/try/demo_source/horse.mp3"></audio></div>
+    <script>
+        $(function(){
+            $(document).on('click','.musicPlay',function(){
+                if($(this).attr('play')== 'opend'){
+                    $(this).addClass('rotate');
+                    $(this).attr('play','closed');
+                    document.querySelector('#playMusic').play();
+                }else{
+                    $(this).removeClass('rotate');
+                    $(this).attr('play','opend');
+                    document.querySelector('#playMusic').pause();
+                }
+            })
+        })
+    </script>
+</body>
+</html>
