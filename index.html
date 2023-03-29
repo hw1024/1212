@@ -1,33 +1,62 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>doem2</title>
+    <style>
+        .box {
+            text-align: center;
+        }
+        .btn {
+            display: inline-block;
+            box-sizing: border-box;
+            height: 44px;
+            margin: 50% auto 0;
+            line-height: 44px;
+            color: #fff;
+            background-color: #07c160;
+            border: 1px solid #07c160;
+            padding: 0 20px;
+            font-size: 16px;
+            text-align: center;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <div class="pages">
-        音频+可以关闭
+    <div class="box">
+<!--        <div class="btn" id="btn">打开小程序</div>-->
+        <wx-open-launch-weapp
+                id="launch-btn"
+                appid="wx12345678"
+                path="pages/home/index?user=123&action=abc"
+        >
+            <script type="text/wxtag-template">
+                <style>.btn { padding: 12px }</style>
+                <button class="btn">打开小程序1</button>
+            </script>
+        </wx-open-launch-weapp>
     </div>
-    <div class="musicPlay music-play rotate" play="closed">122121</div>
-    <div class="invMusic"><audio id="playMusic" preload="load" autoplay=""  src="https://www.runoob.com/try/demo_source/horse.mp3"></audio></div>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
     <script>
-        $(function(){
-            $(document).on('click','.musicPlay',function(){
-                if($(this).attr('play')== 'opend'){
-                    $(this).addClass('rotate');
-                    $(this).attr('play','closed');
-                    document.querySelector('#playMusic').play();
-                }else{
-                    $(this).removeClass('rotate');
-                    $(this).attr('play','opend');
-                    document.querySelector('#playMusic').pause();
-                }
-            })
-        })
+        var btn = document.getElementById('launch-btn');
+        btn.addEventListener('launch', function (e) {
+            console.log('success');
+        });
+        btn.addEventListener('error', function (e) {
+            console.log('fail', e.detail);
+        });
     </script>
+<!--    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>-->
+<!--    <script>-->
+<!--        $(function () {-->
+<!--            $('#btn').on("click", function () {-->
+<!--                window.open("#小程序://iSpotCheck/UUxIlOllugUFYTh");-->
+<!--            })-->
+<!--        })-->
+<!--    </script>-->
 </body>
 </html>
