@@ -28,53 +28,8 @@
 </head>
 <body>
     <div class="box">
-        <div class="btn" id="btn">测试打开小程序44</div>
-<!--        <wx-open-launch-weapp-->
-<!--                id="launch-btn"-->
-<!--                appid="wx86f4b83f0eb72fed"-->
-<!--                username="gh_5bfcf5134fde"-->
-<!--                path="pages/home/index?user=123&action=abc"-->
-<!--        >-->
-<!--            <script type="text/wxtag-template">-->
-<!--                <style>.btn { padding: 12px }</style>-->
-<!--                <button class="btn">打开小程序</button>-->
-<!--            </script>-->
-<!--        </wx-open-launch-weapp>-->
-<!--    </div>-->
-<!--    <script typet="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>-->
-<!--    <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>-->
-<!--    <script>-->
-<!--        wx.config({-->
-<!--            // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印-->
-<!--            // debug: true,-->
-<!--            // 必填，公众号的唯一标识-->
-<!--            appId: "wx86f4b83f0eb72fed",-->
-<!--            // 必填，生成签名的时间戳-->
-<!--            timestamp: "12122122121",-->
-<!--            // 必填，生成签名的随机串-->
-<!--            nonceStr: "qqwqqwqqwwq",-->
-<!--            // 必填，签名-->
-<!--            signature: "21211211212121",-->
-<!--            // 必填，需要使用的JS接口列表，且任意填写-->
-<!--            jsApiList: ['scanQRCode'],-->
-<!--            // 可选，需要使用的开放标签列表，wx-open-launch-weapp 指H5跳转小程序 wx-open-launch-app 指H5跳转app-->
-<!--            openTagList: ["wx-open-launch-weapp"],-->
-<!--        })-->
-<!--        wx.ready(function () {-->
-<!--            var btn = document.getElementById('launch-btn');-->
-<!--            btn.addEventListener('launch', function (e) {-->
-<!--                console.log('success');-->
-<!--            });-->
-<!--            btn.addEventListener('error', function (e) {-->
-<!--                console.log('fail', e.detail);-->
-<!--            });-->
-<!--        })-->
-<!--        wx.error(function (res) {-->
-<!--            console.log(res, 'error');-->
-<!--            // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名-->
-<!--        })-->
-
-<!--    </script>-->
+        <div class="btn" id="btn">打开小程序</div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script>
         // $.ajax({
@@ -94,11 +49,11 @@
         //     }
         // })
         window.onload = function () {
-            location.href="weixin://dl/business/?t=PWSOWdHonTs"
+            location.href="weixin://dl/business/?t=yBBBrHpweld"
         }
         $(function () {
             $('#btn').on("click", function () {
-                location.href="weixin://dl/business/?t=PWSOWdHonTs"
+                location.href="weixin://dl/business/?t=yBBBrHpweld"
             })
         })
     </script>
